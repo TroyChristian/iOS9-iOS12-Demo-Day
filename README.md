@@ -16,48 +16,68 @@
 
 ## Links
 
-* Github Code: `<insert Github repository link here>`
-* Github Proposal: `<insert Proposal Pull Request here>`
-* Trello/Github Project Kanban: `<insert trello board here>`
+* Github Code: `https://github.com/TroyChristian/mort-calc
+* Github Proposal: https://github.com/users/TroyChristian/projects/1
+* Trello/Github Project Kanban: https://github.com/users/TroyChristian/projects/1
 * Test Flight Signup (Recommended): `<insert beta signup link here>`
 * YouTube demo video (Recommended): `<insert video url here>`
 
 ## Hero Image
-
-`<Post one screenshot in an iPhone Simulator frame or an iPhone 11 Pro render using placeit.com>`
+See Git Repo https://github.com/TroyChristian/mort-calc
+`
 
 ## Questions (Answer indented below)
 
 1. What was your favorite feature to implement? Why?
 
-    `<Your answer here>`
+    `The Date Picker becuase it required some new areas of exploration.
 
 2. What was your #1 obstacle or bug that you fixed? How did you fix it?
 
-    `<Your answer here>`
+    3 segue's point at the same view for conciseness, but they contain diffrent information. Sorting them was trial and error. linking them holds the whole app together. 
   
 3. Share a chunk of code (or file) you're proud of and explain why.
 
-    `<Your answer here>`
+     func calculations(mortgage:Mortgage?){
+        guard let mort = mortgage else {return}
+        var n = mort.term * -12
+        
+        var div1:Double = mort.interestRate / 100
+        var i:Double = div1 / 12
+        var p = Double(mort.loan)
+        var numerator1:Double = i + 1.0
+        var numerator1asDub = Double(numerator1)
+        var nAsDub = Double(n)
+        var expo = pow(numerator1asDub, nAsDub)
+        var numdec = 1.0 - expo
+        var bigdaddypaymentday = numdec / i
+        var monthlyamount = p / bigdaddypaymentday
+        
+        var totalNumberOfPayments = Double(n * -1)
+        var totalInterestPaid:Double
+        var arg = totalNumberOfPayments - bigdaddypaymentday
+        totalInterestPaid = arg * monthlyamount
+       var totalPayment = totalInterestPaid + Double(p)}
+       
+       I was proud of identifying the information I had to learn, practicing it with pen and paper (and Python2!) and then commiting it to code. With some inventive variable names to boot. This wasnt a flippancy or a joke however, but a psychological anchor to help me keep my place in the formula.
+       
+       
   
 4. What is your elevator pitch? (30 second description your Grandma or a 5-year old would understand)
 
-    `<Your answer here>`
+    `Math is difficult under pressure, so let a straightforward and discrete mortgage calculator gift you an edge. Else good look with this: P = V[n(1 + n)^t]/[(1 + n)^t - 1] in the middle of a busy and potentially adversarial conversation. 
   
 5. What is your #1 feature?
 
-    `<Your answer here>`
+    `The ability to revisit calculations by their unique ID, and to take notes about them. 
   
 6. What are you future goals?
 
-    `<Your answer here>`
+   A more streamlined and powerful version of this idea could be something impressive.
 
 ## Required Slides (Add your Keynote to your PR)
 
-1. App Name / Team Slide
-2. Elevator Pitch
-3. Your #1 Feature (Customer facing — what can I do with your app?)
-4. Future Goals
+In Git repo.
 
 ## Slide Requirements
 
